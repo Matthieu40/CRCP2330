@@ -12,3 +12,18 @@
 // the screen should remain fully clear as long as no key is pressed.
 
 // Put your code here.
+
+//sets screen to off(black) by default
+@SCREEN
+M = -1
+D = 0
+@SETSCREEN
+0;JMP
+
+//checks for keystrokes. If a key is pressed, all the bits turn to black(1)
+(LOOP)
+@KBD
+D=M
+@SETSCREEN
+D;JEQ
+D=-1
