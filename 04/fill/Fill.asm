@@ -24,8 +24,21 @@ M=D-1
 @KBD
 A=M
 @BLACK
-D;JGT
+A;JGT
 @WHITE
 0;JMP
+
+//Blackens the screen until its filled. When filled, nothing happens
+(BLACK)
+@KBD
+A=M
+@Position
+A=D-M
+@CHECK
+D;JEQ
+
+
+
+
 
 
