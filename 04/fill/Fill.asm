@@ -29,6 +29,7 @@ A;JGT
 0;JMP
 
 //Blackens the screen until its filled. When filled, nothing happens
+//https://www.csie.ntu.edu.tw/~cyy/courses/introCS/13fall/lectures/handouts/lec08_HackML_4up.pdf - link helped with syntax
 (BLACK)
 @KBD
 A=M
