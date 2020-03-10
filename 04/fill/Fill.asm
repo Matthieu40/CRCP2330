@@ -13,17 +13,19 @@
 
 // Put your code here.
 
-//sets screen to off(black) by default
+//sets screen to -1(black) by default
 @SCREEN
-M = -1
-D = 0
-@SETSCREEN
+D=A
+@Position
+M=D-1
+
+//checks for keystrokes. If a key is pressed, all the bits turn to black(1) If value is 0, Screen goes white
+(CHECK)
+@KBD
+A=M
+@BLACK
+D;JGT
+@WHITE
 0;JMP
 
-//checks for keystrokes. If a key is pressed, all the bits turn to black(1)
-(LOOP)
-@KBD
-D=M
-@SETSCREEN
-D;JEQ
-D=-1
+
