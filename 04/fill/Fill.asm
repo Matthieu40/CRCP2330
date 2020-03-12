@@ -38,6 +38,43 @@ A=D-M
 @CHECK
 D;JEQ
 
+//blackens sections of the screen
+@Position
+A=M
+M=-1
+
+@Position
+A=M+1
+@Position
+M=D
+
+//Checks to see if keys are being pressed
+@CHECK
+0;JMP
+
+//Whitens sections of the screen
+(WHITE)
+@SCREEN
+A=A-1
+
+@Position
+A=D-M
+@CHECK
+A;JEQ
+
+@POSITION
+A=M
+M=0
+
+@POSITION
+A=M-1
+@POSITION
+M=D
+
+//Checks to see if keys are being pressed
+@CHECK
+0;JMP
+
 
 
 
