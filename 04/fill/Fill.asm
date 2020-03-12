@@ -16,25 +16,25 @@
 //sets screen to -1(black) by default
 @SCREEN
 D=A
-@Position
+@Position 
 M=D-1
 
 //checks for keystrokes. If a key is pressed, all the bits turn to black(1) If value is 0, Screen goes white
 (CHECK)
 @KBD
-A=M
+D=M      
 @BLACK
-A;JGT
-@WHITE
+D;JGT
+@WHITE  
 0;JMP
 
 //Blackens the screen until its filled. When filled, nothing happens
 //https://www.csie.ntu.edu.tw/~cyy/courses/introCS/13fall/lectures/handouts/lec08_HackML_4up.pdf - link helped with syntax
 (BLACK)
 @KBD
-A=M
+D=M
 @Position
-A=D-M
+D=D-M
 @CHECK
 D;JEQ
 
@@ -44,7 +44,7 @@ A=M
 M=-1
 
 @Position
-A=M+1
+D=M+1
 @Position
 M=D
 
@@ -55,19 +55,19 @@ M=D
 //Whitens sections of the screen
 (WHITE)
 @SCREEN
-A=A-1
+D=A-1
 
 @Position
-A=D-M
+D=D-M
 @CHECK
-A;JEQ
+D;JEQ
 
 @POSITION
 A=M
 M=0
 
 @POSITION
-A=M-1
+D=M-1
 @POSITION
 M=D
 
