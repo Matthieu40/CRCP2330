@@ -7,3 +7,15 @@
 // (R0, R1, R2 refer to RAM[0], RAM[1], and RAM[2], respectively.)
 
 // Put your code here.
+@SUM
+M=0
+@i
+M=1 //i=1
+
+//if(i-R0) > 0 goto END
+(LOOP)
+@i
+D=M
+@R0
+D=D-M
+
