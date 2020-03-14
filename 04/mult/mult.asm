@@ -10,7 +10,7 @@
 @SUM
 M=0
 @i
-M=1 //i=1
+M=0 //i=0
 
 //if(i-R0) > 0 goto END
 (LOOP)
