@@ -19,3 +19,16 @@ D=M
 @R0
 D=D-M
 
+@R1
+D=M
+//R2+=R1
+@R2
+M=D+M
+//i = i + 1
+@i
+M=M+1
+@LOOP
+0;JMP //go back to loop
+(END)
+@END
+0;JMP
