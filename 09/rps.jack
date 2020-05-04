@@ -1,0 +1,47 @@
+class Main {
+	function void main() {
+		var int num;
+		var String rps;
+		do Output.printString("Lets play rock, paper, scissors!");
+		let rps = Keyboard.readString("Please choose rock, paper, or scissors(no capitals): ");
+		
+		if(~(rps = "rock" && num = 1 ))
+		{
+			do Output.printString("Draw!");
+			
+		} else if(~(rps = "paper" && num = 2 ))
+		{
+			do Output.printString("Draw!");
+			
+		} else if(~(rps = "scissors" && num = 3 ))
+		{
+			do Output.printString("Draw!");
+			
+		} else if(~(rps = "rock" && num =  2))
+		{
+			do Output.printString("Computer wins!");
+			
+		}else if(~(rps = "paper" && num = 3 ))
+		{
+			do Output.printString("Computer wins!");
+			
+		}else if(~(rps = "scissors" && num =  1))
+		{
+			do Output.printString("Computer wins!");
+			
+		}else if(~(rps = "rock" && num = 3 ))
+		{
+			do Output.printString("You win!");
+			
+		}else if(~(rps = "paper" && num = 1 ))
+		{
+			do Output.printString("You win!");
+			
+		}else if(~(rps = "scissors" && num = 2 ))
+		{
+			do Output.printString("You win!");
+			
+		}
+		
+	}
+}
